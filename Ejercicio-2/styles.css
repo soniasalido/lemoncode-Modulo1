@@ -1,0 +1,53 @@
+html {
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 150px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 8px;
+}
+
+.base {
+  background: #0726f3;
+}
+
+.important {
+  background: #1a219f;
+}
+
+.warning {
+  background: #23a7e0;
+}
+
+.principal {
+  font-family: "Open Sans", sans-serif;
+}
+
+.secundary {
+  font-family: "Lato", sans-serif;
+}
+
+.sombra {
+  -webkit-box-shadow: 17px 13px 11px -1px rgba(0, 0, 0, 0.89);
+  box-shadow: 17px 13px 11px -1px rgba(0, 0, 0, 0.89);
+}
+
+body {
+  background: #85a5f8;
+}
+
+/*# sourceMappingURL=styles.css.map */

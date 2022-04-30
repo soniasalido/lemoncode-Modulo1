@@ -1,0 +1,94 @@
+
+.container-flex{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 0.1fr 2.5fr 0.1fr;
+  grid-template-rows: 0.1fr 1.8fr 2.8fr 0.1fr;
+  gap: 0 0;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". . ."
+    ". imagen ."
+    ". contenido ."
+    ". . .";
+  width: 400px;
+  height: 650px;
+  background: #eaeaea;
+}
+
+.imagen {
+  grid-area: imagen;
+}
+
+.contenido {
+  grid-area: contenido;
+  border: 1px solid #b7b7b7;
+  background: white;
+}
+
+
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.cabecera {
+  font-family: 'Roboto', sans-serif;
+  margin: 30px 20px 30px 10px;
+}
+
+.tipoContenido {
+  font-family: 'Open Sans', sans-serif;
+  margin: 10px;
+}
+
+
+.fechaPublicacion {
+  font: {
+    family:  'Open Sans', sans-serif;
+    size: 18px;
+    weight: bold;
+  }
+  text-align: right;
+  margin: 10px;
+  & span {
+    color: #799679;
+  }
+}
+
+
+.boton {
+  text-align: center;
+  background: #7abe47;
+  padding: 20px;
+  margin: 10px;
+  font: {
+    family:  'Open Sans', sans-serif;
+    size: 20px;
+    weight: bold;
+  }
+}
+
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 20px;
+}
+
+
+
+@media all and (max-width: 550px) {
+  .container {
+    width: 300px;
+  }
+}

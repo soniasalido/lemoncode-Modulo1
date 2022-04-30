@@ -1,0 +1,50 @@
+html {
+  margin: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2px;
+}
+
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 150px;
+  border: {
+    width: 2px;
+    style: solid;
+  }
+}
+
+.base{
+  background: #9f071d;
+}
+
+.important {
+  background: #570303;
+}
+
+.principal {
+  font-family: 'Roboto', sans-serif;
+}
+
+.warning {
+  background: #f9788b;
+}
+
+
+.secundary{
+  font-family: 'Radio Canada', sans-serif;
+}
+
+.sombra {
+  -webkit-box-shadow: -11px 13px 11px -1px rgba(0,0,0,0.89);
+  box-shadow: -11px 13px 11px -1px rgba(0,0,0,0.89);
+}
