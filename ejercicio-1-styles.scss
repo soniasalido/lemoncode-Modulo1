@@ -1,0 +1,153 @@
+//VARIABLES
+$colorBase1: #e80a2a;
+$colorBase2: #0e4eef;
+$colorBase3: #31c77c;
+
+
+body {
+  background: antiquewhite;
+}
+
+
+.color-box-text {
+  color: white;
+  font: {
+    weight: bold;
+    size: 18px;
+  }
+}
+
+
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width : 15%;
+  height: 100px;
+  border: {
+    radius: 2px;
+    width: 2px;
+    color: $colorBase1;
+    style: solid;
+  }
+}
+
+
+//MIXINS para oscurerer la letra
+@mixin ocurecerLetra{
+  color: darken(white,50%);
+}
+
+
+//MIXINS para oscurecer y aclarar los backgrounds
+@mixin oscurecer($colorBase, $cantidad){
+  background: darken($colorBase, 100% - $cantidad);
+}
+
+@mixin aclarar($colorBase, $cantidad){
+  background: lighten($colorBase, 30% - $cantidad);
+}
+
+
+//**********************************************************************
+//Primera Fila
+.container-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.base-color{
+  background: $colorBase1;
+}
+
+$cantidad: 80;
+@each $item in darken-4, darken-3, darken-2, darken-1 {
+  .#{$item} {
+    @include oscurecer($colorBase1, $cantidad);
+    .color-box-text { @include ocurecerLetra }
+  }
+  $cantidad: $cantidad + 5;
+}
+
+
+$cantidad: 20;
+@each $item in lighten-1, lighten-2, lighten-3, lighten-4 {
+  .#{$item} {
+    @include aclarar($colorBase1, $cantidad);
+    .color-box-text { @include ocurecerLetra }
+  }
+  $cantidad:   $cantidad - 5;
+}
+
+
+//**********************************************************************
+//Segunda Fila
+.container-2 {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.base-colorB{
+  background: $colorBase2;
+}
+
+$cantidad: 80;
+@each $item in darkenB-4, darkenB-3, darkenB-2, darkenB-1 {
+  .#{$item} {
+    @include oscurecer($colorBase2, $cantidad);
+    .color-box-text { @include ocurecerLetra }
+  }
+  $cantidad: $cantidad + 5;
+}
+
+
+$cantidad: 20;
+@each $item in lightenB-1, lightenB-2, lightenB-3, lightenB-4 {
+  .#{$item} {
+    @include aclarar($colorBase2, $cantidad);
+    .color-box-text { @include ocurecerLetra }
+  }
+  $cantidad:   $cantidad - 5;
+}
+
+
+//**********************************************************************
+//Tercera Fila
+.container-3 {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.base-colorC{
+  background: $colorBase3;
+}
+
+$cantidad: 80;
+@each $item in darkenC-4, darkenC-3, darkenC-2, darkenC-1 {
+  .#{$item} {
+    @include oscurecer($colorBase3, $cantidad);
+    .color-box-text { @include ocurecerLetra }
+  }
+  $cantidad: $cantidad + 5;
+}
+
+
+$cantidad: 20;
+@each $item in lightenC-1, lightenC-2, lightenC-3, lightenC-4 {
+  .#{$item} {
+    @include aclarar($colorBase3, $cantidad);
+    .color-box-text { @include ocurecerLetra }
+  }
+  $cantidad:   $cantidad - 5;
+}
