@@ -31,6 +31,12 @@
   background: #393e06;
 }
 
+.menu-container {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+
 .main {
   grid-area: main;
   background: #e7e7e7;
@@ -48,10 +54,6 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
-}
-
-.menu-container {
-  border: 1px solid red;
 }
 
 .menu-title {
@@ -133,7 +135,11 @@ img {
 
   .nav {
     grid-area: nav;
+    position: sticky;
+    top: 0;
     height: 70px;
+    z-index: 1000;
+    witdh: 100%;
   }
 
   .footer {
@@ -195,6 +201,16 @@ img {
 
   .footer {
     font-size: 15px;
+  }
+}
+@media all and (max-width: 384px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav {
+    height: 250px;
   }
 }
 

@@ -36,6 +36,14 @@
   background: #393e06;
 }
 
+
+.menu-container{
+  position: -webkit-sticky;  // required for Safari
+  position: sticky;
+  top: 0; // required as well.
+}
+
+
 .main {
   grid-area: main;
   background: #e7e7e7;
@@ -58,11 +66,6 @@
   padding: 10px;
 }
 
-
-.menu-container{
-  //position: fixed;
-  border: 1px solid red;
-}
 
 
 .menu-title {
@@ -156,8 +159,14 @@ img {
 
   .nav {
     grid-area: nav;
+    //position: -webkit-sticky;  // required for Safari
+    position: sticky;
+    top: 0; // required as well.
     height: 70px;
+    z-index: 1000;
+    witdh:100%;
   }
+
 
   .footer { grid-area: footer; }
 
@@ -217,5 +226,18 @@ img {
     font: {
       size: 15px;
     }
+  }
+}
+
+
+
+@media all and (max-width: 384px) {
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav {
+    height: 250px;
   }
 }
